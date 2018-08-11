@@ -330,7 +330,7 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 20px;
   position: relative;
   width: 85%;
 }
@@ -341,4 +341,51 @@ nav h1 a {
 
 #restaurant-hours td {
   color: #666;
+}
+
+@media only screen and (max-width: 590px) {
+  .inside {
+    display: flex;
+    flex-direction: row;
+    width: 100vw
+  }
+  .inside header {
+    order: 0;
+    width: 100vw;
+  }
+  header nav {
+    order: 0;
+  }
+  header #breadcrumb {
+    order: 1;
+    width: 100vw;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+  .inside #map-container {
+    order: 2;
+    top: 130px;
+    position: relative;
+    height: 200px;
+    width: 100vw;
+  }
+  .inside #restaurant-container {
+    order: 3;
+    position: relative;
+    width: 100vw;
+    margin: auto;
+  }
+  .inside #reviews-container {
+    width: 100vw;
+  }
+  #reviews-list {
+    width: 100vw;
+  }
+  .filter-options h2 {
+    flex: 3 1 auto;
+  }
+  .filter-options select {
+    flex: 1 1 auto;
+  }
 }
